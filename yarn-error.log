@@ -1,0 +1,69 @@
+Arguments: 
+  /Users/greg/.nvm/versions/node/v14.17.1/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/greg/.cargo/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/node010/0.10.40_1/bin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Users/greg/.cargo/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/greg/.nvm/versions/node/v14.17.1/bin:/Users/greg/u/sdk/flutter/bin:/Users/greg/u/sdk/flutter/bin
+
+Yarn version: 
+  0.24.4
+
+Node version: 
+  14.17.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+  	"name": "kit",
+  	"version": "0.0.1",
+  	"description": "",
+  	"main": "index.js",
+  	"scripts": {
+  		"build": "pnpm build --filter=\"@sveltejs/*\" --filter=\"create-svelte\"",
+  		"test": "pnpm -r test --workspace-concurrency=1",
+  		"check": "pnpm -r check",
+  		"lint": "pnpm -r lint",
+  		"format": "pnpm -r format",
+  		"release": "pnpm publish --tag=next --filter=\"@sveltejs/*\" --filter=\"create-svelte\""
+  	},
+  	"repository": {
+  		"type": "git",
+  		"url": "git+https://github.com/sveltejs/kit.git"
+  	},
+  	"author": "",
+  	"license": "MIT",
+  	"bugs": {
+  		"url": "https://github.com/sveltejs/kit/issues"
+  	},
+  	"homepage": "https://github.com/sveltejs/kit#readme",
+  	"devDependencies": {
+  		"@changesets/cli": "^2.16.0",
+  		"@rollup/plugin-commonjs": "^17.1.0",
+  		"@rollup/plugin-json": "^4.1.0",
+  		"@rollup/plugin-node-resolve": "^11.2.1",
+  		"@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.6.0",
+  		"@typescript-eslint/eslint-plugin": "^4.22.1",
+  		"@typescript-eslint/parser": "^4.22.1",
+  		"eslint": "^7.25.0",
+  		"eslint-plugin-import": "^2.22.1",
+  		"eslint-plugin-svelte3": "^3.2.0",
+  		"playwright-chromium": "^1.10.0",
+  		"prettier": "2.2.1",
+  		"rollup": "^2.47.0",
+  		"typescript": "^4.2.4"
+  	},
+  	"type": "module"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://github.com/sveltejs/eslint-config.git/info/refs?service=git-upload-pack: ETIMEDOUT
+      at Timeout._onTimeout (/Users/greg/.config/yarn/global/node_modules/request/request.js:852:19)
+      at listOnTimeout (internal/timers.js:557:17)
+      at processTimers (internal/timers.js:500:7)

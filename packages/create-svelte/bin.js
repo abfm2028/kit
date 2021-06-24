@@ -21,6 +21,19 @@ async function main() {
 	console.log(gray(`\ncreate-svelte version ${version}`));
 	console.log(disclaimer);
 
+	/**
+	 * @mynote
+	 * 按照 sveltekit 官方的文档，用这个命令创建一个项目
+	 * npm init svelte@next my-app
+	 * 关于 npm init 的解释 （npm init <name> (same as `npm exec create-<name>`)）
+	 * 对于 npm init svelte@next my-app ，
+	 * 意思是 下载 tag 是 next 的 create-sevlte 包并执行，
+	 * 通过 node 运行脚本，命令行得到的参数是 argv[0]: <node的路径>, argv[1]:<脚本的路径>, argv[2]: 第一个参数, ...依次更多参数
+	 * 那么这个初始化命令对应的参数就是 1: create-svelte 的 bin.js，2: my-app
+	 *
+	 * 如果没有提供第二个参数，那么就用 . 当前目录
+	 * cwd: current working directory
+	*/
 	const cwd = process.argv[2] || '.';
 
 	if (fs.existsSync(cwd)) {
@@ -93,7 +106,7 @@ async function main() {
 			bold(
 				green(
 					'✔ Added TypeScript support. ' +
-						'To use it inside Svelte components, add lang="ts" to the attributes of a script tag.'
+					'To use it inside Svelte components, add lang="ts" to the attributes of a script tag.'
 				)
 			)
 		);
@@ -104,7 +117,7 @@ async function main() {
 			bold(
 				green(
 					'✔ Added ESLint.\n' +
-						'Readme for ESLint and Svelte: https://github.com/sveltejs/eslint-plugin-svelte3'
+					'Readme for ESLint and Svelte: https://github.com/sveltejs/eslint-plugin-svelte3'
 				)
 			)
 		);
@@ -115,8 +128,8 @@ async function main() {
 			bold(
 				green(
 					'✔ Added Prettier.\n' +
-						'General formatting options: https://prettier.io/docs/en/options.html\n' +
-						'Svelte-specific formatting options: https://github.com/sveltejs/prettier-plugin-svelte#options'
+					'General formatting options: https://prettier.io/docs/en/options.html\n' +
+					'Svelte-specific formatting options: https://github.com/sveltejs/prettier-plugin-svelte#options'
 				)
 			)
 		);
@@ -124,8 +137,8 @@ async function main() {
 
 	console.log(
 		'\nWant to add other parts to your code base? ' +
-			'Visit https://github.com/svelte-add/svelte-adders, a community project of commands ' +
-			'to add particular functionality to Svelte projects\n'
+		'Visit https://github.com/svelte-add/svelte-adders, a community project of commands ' +
+		'to add particular functionality to Svelte projects\n'
 	);
 
 	console.log('\nNext steps:');
